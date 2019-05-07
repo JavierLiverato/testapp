@@ -5,6 +5,7 @@ var app         = express();
 var os = require('os')
 
 const PORT = process.env.PORT || 3000
+app.set('port', (process.env.PORT || 5000));
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
@@ -21,6 +22,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.listen(PORT, function(){
+app.listen(app.get('port'), function(){
 	console.log('server running on '+os.hostname()+"--"+PORT);
 });
