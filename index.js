@@ -18,6 +18,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.listen(3000, function(){
-	console.log('server running on localhost:3000');
+app.listen(80, function(){
+	console.log('server running on localhost:80');
 });
