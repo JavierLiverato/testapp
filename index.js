@@ -20,5 +20,5 @@ app.use(function(req, res, next) {
 });
 
 app.listen(process.env.PORT || 3000, function(){
-	console.log('server running on '+os.hostname()+"--"+PORT);
+	console.log('server running on '+os.hostname()+"--"+process.env.PORT);
 });
