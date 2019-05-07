@@ -17,7 +17,7 @@ app.use('/', router);
 app.use(function(req, res, next) {
 	next(createError(404));
 });
-
-app.listen(process.env.PORT || 3000, function(){
+//process.env.PORT 
+app.listen(5000, function(){
 	console.log('server running on '+os.hostname()+"--"+process.env.PORT);
 });
