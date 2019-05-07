@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express     = require('express');
 var bodyParser  = require('body-parser');
 var app         = express();
+var os = require('os')
 
 const PORT = process.env.PORT || 3000
 
@@ -21,5 +22,5 @@ app.use(function(req, res, next) {
 });
 
 app.listen(PORT, function(){
-	console.log('server running on localhost:'+PORT);
+	console.log('server running on '+os.hostname()+"--"+PORT);
 });
