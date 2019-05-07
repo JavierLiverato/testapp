@@ -4,7 +4,6 @@ var bodyParser  = require('body-parser');
 var app         = express();
 var os          = require('os');
 
-app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
@@ -19,6 +18,6 @@ app.use(function(req, res, next) {
 	next(createError(404));
 });
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3001, function(){
 	console.log('server running on '+os.hostname()+"--"+process.env.PORT);
 });
