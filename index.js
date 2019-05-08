@@ -18,6 +18,6 @@ app.use(function(req, res, next) {
 	next(createError(404));
 });
 //process.env.PORT 
-app.listen((process.env.PORT || 5000), function(){
-	console.log('server running on '+os.hostname()+"--"+process.env.PORT);
-});
+const PORT = 8080;
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST);
