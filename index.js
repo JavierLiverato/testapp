@@ -18,6 +18,6 @@ app.use(function(req, res, next) {
 	next(createError(404));
 });
 //process.env.PORT 
-app.listen(5000, function(){
+app.listen((process.env.PORT || 5000), function(){
 	console.log('server running on '+os.hostname()+"--"+process.env.PORT);
 });
